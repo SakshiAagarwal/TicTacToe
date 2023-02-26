@@ -1,6 +1,5 @@
 console.log("Welcome to Tic Tac Toe");
 let turnM = new Audio("ting.mp3");
-let gameover = new Audio("gameover.mp3");
 let turn = "X";
 
 //function to change turn
@@ -23,10 +22,10 @@ const checkWin = ()=>{
     ]
     wins.forEach(e =>{
         if((boxtext[e[0]].innerText === boxtext[e[1]].innerText) && (boxtext[e[2]].innerText === boxtext[e[1]].innerText) && (boxtext[e[0]].innerText !== "")) {
-            document.querySelector('.info').innerHTML = boxtext[e[0]].innerText + "Won!";
+            document.querySelector('.info').innerHTML = boxtext[e[0]].innerText + " Won!";
             document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "200px";
+            gameover.play();
         }
-        
     })
 
 }
