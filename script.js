@@ -24,7 +24,6 @@ const checkWin = ()=>{
         if((boxtext[e[0]].innerText === boxtext[e[1]].innerText) && (boxtext[e[2]].innerText === boxtext[e[1]].innerText) && (boxtext[e[0]].innerText !== "")) {
             document.querySelector('.info').innerHTML = boxtext[e[0]].innerText + " Won!";
             document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "200px";
-            gameover.play();
         }
     })
 
@@ -53,5 +52,5 @@ reset.addEventListener('click', ()=>{
     });
     turn = "X";
     document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
-    document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "0px"
+    document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "0px";
 })
